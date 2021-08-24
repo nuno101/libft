@@ -19,6 +19,15 @@ fclean:
 re:
 	echo "TODO: re rule"
 
+ft_isalpha.o:
+	norminette ft_isalpha.c
+	norminettev2 ft_isalpha.c
+	gcc -c -Wall -Wextra -Werror ft_isalpha.c
+
+test_ft_islpha:
+	gcc -Wall -Wextra -Werror test/test_ft_isalpha.c -o test_ft_isalpha.out
+	chmod +x test_ft_isalpha.out
+
 ft_strlen.o:
 	norminette ft_strlen.c
 	norminettev2 ft_strlen.c
