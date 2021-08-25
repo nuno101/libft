@@ -1,20 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/24 16:19:41 by nlouro            #+#    #+#             */
-/*   Updated: 2021/08/25 13:39:19 by nlouro           ###   ########.fr       */
+/*   Created: 2021/08/24 17:15:36 by nlouro            #+#    #+#             */
+/*   Updated: 2021/08/25 13:44:04 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	if (c >= 0 && c <= 9)
+	int	i;
+
+	i = 0;
+	while (*s != '\0')
 	{
-		return (c);
+		*s++;
+		i++;
 	}
-	return (0);
+	if (c == '\0')
+		return (*s);
+	while (i >= 0)
+	{
+		if (s == c)
+			return (*s);
+		else
+			i--;
+	}
+	return ('\0');
 }

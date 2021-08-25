@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/24 16:19:41 by nlouro            #+#    #+#             */
-/*   Updated: 2021/08/25 13:39:19 by nlouro           ###   ########.fr       */
+/*   Created: 2021/08/25 11:49:15 by nlouro            #+#    #+#             */
+/*   Updated: 2021/08/25 13:54:46 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+size_t	strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	if (c >= 0 && c <= 9)
+	if (dstsize == 0)
+		return (*dst);
+	while (dstsize > 1)
 	{
-		return (c);
+		*dst = *src;
+		dstsize--;
+		*dst++;
+		*src++;
 	}
-	return (0);
+	*dst++;
+	*dst = '\0';
+	return (*dst);
 }

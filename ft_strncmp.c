@@ -6,20 +6,20 @@
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 17:00:34 by nlouro            #+#    #+#             */
-/*   Updated: 2021/08/24 17:10:55 by nlouro           ###   ########.fr       */
+/*   Updated: 2021/08/25 13:53:55 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	strncmp(const char *s1, const char *s2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while ((*s1 != '\0' && *s2 != '\0') && *s1 == *s2)
 	{
 		i++;
 		if (i == n)
-			break;
+			break ;
 		s1++;
 		s2++;
 	}

@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/24 16:19:41 by nlouro            #+#    #+#             */
-/*   Updated: 2021/08/25 13:39:19 by nlouro           ###   ########.fr       */
+/*   Created: 2021/08/25 11:25:42 by nlouro            #+#    #+#             */
+/*   Updated: 2021/08/25 13:56:06 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	if (c >= 0 && c <= 9)
+	while (n > 0)
 	{
-		return (c);
+		*dst = *src;
+		n--;
+		*dst++;
+		*src++;
 	}
-	return (0);
+	/* FIXME - return dst original value
+	 */
+	return (*dst);
 }

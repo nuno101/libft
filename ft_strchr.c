@@ -6,11 +6,11 @@
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 17:15:36 by nlouro            #+#    #+#             */
-/*   Updated: 2021/08/24 17:19:31 by nlouro           ###   ########.fr       */
+/*   Updated: 2021/08/25 13:43:40 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	while (*s != '\0')
 	{
@@ -19,5 +19,8 @@ char	*strchr(const char *s, int c)
 		else
 			*s++;
 	}
-	return (0);
+	if (c == '\0' && *s == '\0')
+		return (*s);
+	else
+		return ('\0');
 }
