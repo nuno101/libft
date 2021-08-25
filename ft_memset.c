@@ -6,9 +6,11 @@
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 11:10:20 by nlouro            #+#    #+#             */
-/*   Updated: 2021/08/25 11:17:00 by nlouro           ###   ########.fr       */
+/*   Updated: 2021/08/25 14:52:52 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stddef.h>
 
 void	*memset(void *b, int c, size_t len)
 {

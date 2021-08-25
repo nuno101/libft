@@ -1,20 +1,38 @@
-#$(NAME)
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: nlouro <nlouro@student.42heilbronn.de      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2021/08/25 14:06:58 by nlouro            #+#    #+#              #
+#    Updated: 2021/08/25 14:38:38 by nlouro           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME = libft.a
+C_FLAGS =  -Wall -Wextra -Werror
+C_FILES = ft_bzero.c ft_isascii.c	ft_memchr.c	ft_memset.c	ft_strlen.c	ft_tolower.c \
+		ft_isalnum.c	ft_isdigit.c	ft_memcmp.c	ft_strchr.c	ft_strncmp.c	ft_toupper.c \
+		ft_isalpha.c	ft_isprint.c	ft_memcpy.c	ft_strlcpy.c	ft_strrchr.c
+OBJ_FILES = $(C_FILES:%.c=%.o)
+
+all: $(NAME) 
+
+$(NAME): $(OBJ_FILES)
+	ar -rcs $(NAME) $(OBJ_FILES)
+
+$(OBJ_FILES): $(C_FILES)
+	gcc $(C_FLAGS) $(C_FILES)
 
 main.o:
 	gcc -c -Wall -Wextra -Werror -o main.o main.c
 
-all: 
-	echo "TODO all rule"
-
 clean:
-	rm *.o
-	rm *.out
-	rm test/*.o
-	rm test/*.out
+	rm $(OBJ_FILES) 
 
 fclean:
-	rm ft*.o
-	rm test/*.o
+	rm -f $(OBJ_FILES) 
 
 re:
 	echo "TODO: re rule"

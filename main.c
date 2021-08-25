@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/25 11:25:42 by nlouro            #+#    #+#             */
-/*   Updated: 2021/08/25 14:52:42 by nlouro           ###   ########.fr       */
+/*   Created: 2021/08/25 14:04:04 by nlouro            #+#    #+#             */
+/*   Updated: 2021/08/25 14:04:57 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+int	main(void)
 {
-	while (n > 0)
-	{
-		*dst = *src;
-		n--;
-		*dst++;
-		*src++;
-	}
-	/* FIXME - return dst original value
-	 */
-	return (*dst);
+	return (0);
 }
