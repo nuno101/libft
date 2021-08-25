@@ -6,7 +6,7 @@
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 11:25:42 by nlouro            #+#    #+#             */
-/*   Updated: 2021/08/25 14:52:42 by nlouro           ###   ########.fr       */
+/*   Updated: 2021/08/25 18:44:24 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,17 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
+	char *ptr_d;
+	char *ptr_s;
+
+	ptr_d = dst;
+	ptr_s = (char *)src;
 	while (n > 0)
 	{
-		*dst = *src;
+		*ptr_d = *ptr_s;
 		n--;
-		*dst++;
-		*src++;
+		ptr_d++;
+		ptr_s++;
 	}
-	/* FIXME - return dst original value
-	 */
-	return (*dst);
+	return (dst);
 }
