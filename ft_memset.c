@@ -6,7 +6,7 @@
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 11:10:20 by nlouro            #+#    #+#             */
-/*   Updated: 2021/08/25 14:52:52 by nlouro           ###   ########.fr       */
+/*   Updated: 2021/08/25 18:58:09 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,14 @@
 
 void	*memset(void *b, int c, size_t len)
 {
+	char *ptr;
+
+	ptr = b;
 	while (len > 0)
 	{
-		*b = c;
+		*ptr = (char) c;
 		len--;
-		*b++;
+		ptr++;
 	}
-	return (*b);
+	return (b);
 }
