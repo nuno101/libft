@@ -6,7 +6,7 @@
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 11:14:07 by nlouro            #+#    #+#             */
-/*   Updated: 2021/08/25 17:50:43 by nlouro           ###   ########.fr       */
+/*   Updated: 2021/08/26 10:57:10 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	char *ptr;
+	char	*ptr;
+
 	ptr = s;
 	while (n > 0)
 	{

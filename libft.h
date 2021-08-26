@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/08/26 11:08:17 by nlouro            #+#    #+#             */
+/*   Updated: 2021/08/26 11:08:32 by nlouro           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
-#define LIBFT_H
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <stddef.h>
+# define LIBFT_H
+# include <stdio.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <stddef.h>
 
 int		ft_isascii(int c);
 int		ft_isalnum(int c);

@@ -6,7 +6,7 @@
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 11:49:15 by nlouro            #+#    #+#             */
-/*   Updated: 2021/08/25 18:38:54 by nlouro           ###   ########.fr       */
+/*   Updated: 2021/08/26 11:03:41 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ size_t	strlcpy(char *dst, const char *src, size_t dstsize)
 	{
 		*dst = *src;
 		dstsize--;
-		//*dst++;
 		dst++;
 		src++;
 	}
