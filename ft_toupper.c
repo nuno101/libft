@@ -6,7 +6,7 @@
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 16:48:29 by nlouro            #+#    #+#             */
-/*   Updated: 2021/08/26 11:04:43 by nlouro           ###   ########.fr       */
+/*   Updated: 2021/08/26 14:05:47 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@ int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 	{
-		return (c + 32);
+		return (c - 32);
 	}
 	return (c);
 }

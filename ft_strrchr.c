@@ -6,7 +6,7 @@
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 17:15:36 by nlouro            #+#    #+#             */
-/*   Updated: 2021/08/25 18:34:58 by nlouro           ###   ########.fr       */
+/*   Updated: 2021/08/26 14:10:50 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ char	*ft_strrchr(const char *s, int c)
 	int	i;
 
 	i = ft_strlen((char *)s);
-	if (c == '\0')
-		return ((char *)s);
 	while (i >= 0)
 	{
 		if (*(s + i) == (char)c)

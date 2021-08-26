@@ -6,7 +6,7 @@
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 16:48:29 by nlouro            #+#    #+#             */
-/*   Updated: 2021/08/24 16:53:07 by nlouro           ###   ########.fr       */
+/*   Updated: 2021/08/26 14:06:27 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@ int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 	{
-		return (c - 32);
+		return (c + 32);
 	}
 	return (c);
 }
