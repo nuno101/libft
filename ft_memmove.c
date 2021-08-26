@@ -1,27 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/25 11:10:20 by nlouro            #+#    #+#             */
-/*   Updated: 2021/08/26 14:34:36 by nlouro           ###   ########.fr       */
+/*   Created: 2021/08/26 14:31:27 by nlouro            #+#    #+#             */
+/*   Updated: 2021/08/26 15:37:54 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char	*ptr;
+	size_t	i;
+	char	*ptr_d;
+	char	*ptr_s;
 
-	ptr = b;
-	while (len > 0)
+	i = 0;
+	ptr_d = (char *)dst;
+	ptr_s = (char *)src;
+	if (ptr_s < ptr_d)
 	{
-		*ptr = (char)c;
-		len--;
-		ptr++;
+		while(len > 0)
+		{
+			len--;
+			*(ptr_d + len) = *(ptr_s + len);
+		}
+	} else if (ptr_s > ptr_d) {
+		while(i < len)
+		{
+			*(ptr_d + i) = *(ptr_s + i);
+			i++;
+		}
 	}
-	return (b);
+	return (dst);
 }
