@@ -6,7 +6,7 @@
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/26 11:08:17 by nlouro            #+#    #+#             */
-/*   Updated: 2021/09/10 13:44:11 by nlouro           ###   ########.fr       */
+/*   Updated: 2021/09/10 15:18:23 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 
 /* Additional functions */
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
 
 #endif
