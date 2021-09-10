@@ -6,7 +6,7 @@
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/26 11:08:17 by nlouro            #+#    #+#             */
-/*   Updated: 2021/09/09 15:05:21 by nlouro           ###   ########.fr       */
+/*   Updated: 2021/09/10 13:44:11 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,10 @@ void	*ft_memmove(void *dst, const void *src, size_t len);
 
 char	*ft_strdup(const char *s1);
 void	*ft_calloc(size_t count, size_t size);
-size_t	ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize);
-size_t	ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+
+/* Additional functions */
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif

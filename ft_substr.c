@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/25 11:49:15 by nlouro            #+#    #+#             */
-/*   Updated: 2021/09/10 10:35:05 by nlouro           ###   ########.fr       */
+/*   Created: 2021/09/10 11:30:02 by nlouro            #+#    #+#             */
+/*   Updated: 2021/09/10 11:56:16 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h" 
+#include "libft.h"
 
-size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
-	size_t	src_len;
+	char	*buffer;
+	int		i;
 
-	src_len = ft_strlen(src);
-	if (dstsize == 0)
-		return (src_len);
+	buffer = malloc(len + 1);
+	if (buffer == 0)
+		return (NULL);
 	i = 0;
-	while (*(src + i) && i < dstsize - 1)
+	while ((size_t) i < len && *(s + start + i) != '\0')
 	{
-		*(dst + i) = *(src + i);
+		buffer[i] = *(s + start + i);
 		i++;
 	}
-	*(dst + i) = '\0';
-	return (src_len);
+	buffer[i + 1] = '\0';
+	return (buffer);
 }

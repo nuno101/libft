@@ -6,7 +6,7 @@
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 11:47:45 by nlouro            #+#    #+#             */
-/*   Updated: 2021/09/09 16:06:30 by nlouro           ###   ########.fr       */
+/*   Updated: 2021/09/10 10:40:23 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,19 +23,20 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	match_len = ft_strlen(needle);
 	if (match_len == 0)
 		return ((char *)haystack);
-	while(*(haystack + i + j) != '\0' && (i + j) < len)
+	while (*(haystack + i + j) != '\0' && (i + j) < len)
 	{
-		if (*(haystack + i + j) == *(needle + i + j) && (i + j) < len) 
+		if (*(haystack + i + j) == *(needle + i + j) && (i + j) < len)
 		{
 			match_len--;
-			if (match_len == 0) {
+			if (match_len == 0)
 				return ((char *)(haystack + i));
-			}
 			j++;
-		} else {
+		}
+		else
+		{
 			i = i + j + 1;
 			j = 0;
-		  match_len = ft_strlen(needle);
+			match_len = ft_strlen(needle);
 		}
 	}
 	return (NULL);

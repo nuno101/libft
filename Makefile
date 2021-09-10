@@ -6,17 +6,18 @@
 #    By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/25 14:06:58 by nlouro            #+#    #+#              #
-#    Updated: 2021/09/09 15:02:52 by nlouro           ###   ########.fr        #
+#    Updated: 2021/09/10 13:43:49 by nlouro           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 C_FLAGS =  -c -Wall -Wextra -Werror
 C_FILES = ft_bzero.c	ft_isascii.c	ft_memchr.c		ft_memmove.c	ft_strlcat.c	\
-	  	  ft_strncmp.c	ft_toupper.c 	ft_isalnum.c	ft_isdigit.c	ft_memcmp.c	\
+	  	  ft_strncmp.c	ft_toupper.c 	ft_isalnum.c	ft_isdigit.c	ft_memcmp.c		\
 	  	  ft_memset.c	ft_strlcpy.c	ft_strrchr.c	ft_isalpha.c	ft_isprint.c	\
 	  	  ft_memcpy.c	ft_strchr.c		ft_strlen.c		ft_tolower.c	ft_strnstr.c	\
-		  ft_atoi.c		ft_strdup.c		ft_calloc.c
+		  ft_atoi.c		ft_strdup.c		ft_calloc.c										\
+		  ft_substr.c
 
 OBJ_FILES = $(C_FILES:%.c=%.o)
 
@@ -29,15 +30,13 @@ $(OBJ_FILES): $(C_FILES)
 	gcc $(C_FLAGS) $(C_FILES)
 
 clean:
-	rm $(OBJ_FILES) 
-
-fclean:
 	rm -f $(OBJ_FILES) 
 
-re:
-	echo "TODO: re rule"
+fclean: clean
+	rm -f $(OBJ_FILES) 
+	rm -f $(NAME)
 
-
+re: fclean all
 
 ft_isalpha.o:
 	norminette ft_isalpha.c

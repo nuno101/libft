@@ -6,7 +6,7 @@
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 15:01:05 by nlouro            #+#    #+#             */
-/*   Updated: 2021/09/09 15:12:53 by nlouro           ###   ########.fr       */
+/*   Updated: 2021/09/10 10:43:58 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void *buffer;
+	void	*buffer;
 
 	buffer = malloc(count * size);
 	if (buffer == 0)
 		return (NULL);
-    ft_bzero(buffer, count * size); 
+	ft_bzero(buffer, count * size);
 	return (buffer);
 }

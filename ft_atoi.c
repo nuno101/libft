@@ -6,7 +6,7 @@
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 13:55:35 by nlouro            #+#    #+#             */
-/*   Updated: 2021/09/09 15:46:07 by nlouro           ###   ########.fr       */
+/*   Updated: 2021/09/10 10:44:40 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,8 @@ int	ft_atoi(const char *str)
 	i = 0;
 	sign = 1;
 	nr = 0;
-	while (*(str + i) == '\n' ||
-		*(str + i) == '\t' ||
-		*(str + i) == '\v' ||
-		*(str + i) == '\f' ||
-		*(str + i) == '\r' ||
-		*(str + i) == ' ')
+	while (*(str + i) == '\n' || *(str + i) == '\t' || *(str + i) == '\v' || \
+		*(str + i) == '\f' || *(str + i) == '\r' || *(str + i) == ' ')
 		i++;
 	while (*(str + i) == '-' || *(str + i) == '+')
 	{
