@@ -6,33 +6,33 @@
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/26 15:45:05 by nlouro            #+#    #+#             */
-/*   Updated: 2021/09/10 11:04:18 by nlouro           ###   ########.fr       */
+/*   Updated: 2021/08/26 15:46:38 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	dst_len;
-	size_t	src_len;
-	size_t	i;
+	size_t dst_len;
+	size_t src_len;
+	size_t i;
 
-	dst_len = ft_strlen(dst);
-	src_len = ft_strlen(src);
-	if (dstsize == 0 || src_len == 0)
-		return (0);
 	i = 0;
-	if (dstsize <= dst_len)
+	dst_len = (size_t) ft_strlen(dst);
+	src_len = ft_strlen(src);
+	if (dstsize == 0)
+		return (src_len);
+	if (dstsize < dst_len)
 		return (src_len + dstsize);
-	if (dstsize > dst_len + 1)
+	while ((dst_len + i < dstsize) && *(src + i) != '\0')
 	{
-		while (i < dstsize - dst_len)
-		{
-			*(dst + dst_len + i) = *(src + i);
-			i++;
-		}
-		*(dst + i) = '\0';
+		*(dst + dst_len + i) = *(src + i);
+		i++;
 	}
-	return (dst_len + src_len);
+	if (dst_len < dstsize && dst_len + i == dstsize)
+		*(dst + dst_len + i - 1) = '\0';
+	else
+		*(dst + dst_len + i) = '\0';
+	return(dst_len + src_len);
 }

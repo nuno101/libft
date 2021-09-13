@@ -47,14 +47,12 @@ test_ft_islpha:
 	gcc -Wall -Wextra -Werror test/test_ft_isalpha.c -o test_ft_isalpha.out
 	chmod +x test_ft_isalpha.out
 
-ft_strlen.o:
-	norminette ft_strlen.c
-	norminettev2 ft_strlen.c
-	gcc -c -Wall -Wextra -Werror ft_strlen.c
-
 test_ft_strlen:
 	gcc -Wall -Wextra -Werror test/test_ft_strlen.c -o test_ft_strlen.out
 	chmod +x test_ft_strlen.out
-
-run:
 	./test_ft_strlen.out
+
+test_ft_strlcat:
+	gcc -Wall -Wextra -Werror -v test/test_ft_strlcat.c -o test_ft_strlcat.out
+	chmod +x test_ft_strlcat.out
+	./test_ft_strlcat.out
