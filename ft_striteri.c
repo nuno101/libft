@@ -6,8 +6,20 @@
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 23:12:12 by nlouro            #+#    #+#             */
-/*   Updated: 2021/09/14 23:12:46 by nlouro           ###   ########.fr       */
+/*   Updated: 2021/09/15 08:53:00 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+{
+    unsigned int i;
+
+    if (s == 0)
+        return;
+    i = 0;
+    while (s[i] != '\0')
+    {
+        f(i, &s[i]);
+        i++;
+    }
+}
