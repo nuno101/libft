@@ -6,7 +6,7 @@
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 23:10:49 by nlouro            #+#    #+#             */
-/*   Updated: 2021/09/15 08:37:23 by nlouro           ###   ########.fr       */
+/*   Updated: 2021/09/15 11:52:57 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {	
-	unsigned int s_len;
-	unsigned int i;
-	char *str;
+	unsigned int	s_len;
+	unsigned int	i;
+	char			*str;
 
 	if (s == 0)
 		return (0);
