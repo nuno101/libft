@@ -6,7 +6,7 @@
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 16:43:34 by nlouro            #+#    #+#             */
-/*   Updated: 2021/09/15 15:53:50 by nlouro           ###   ########.fr       */
+/*   Updated: 2021/09/15 16:48:59 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,31 +29,29 @@ int	ft_nbrlen(int nb)
 
 char	*ft_itoa(int n)
 {
-	int		len;
-	char	*buffer;
+	unsigned int	nn;
+	int				len;
+	char			*buffer;
 
+	nn = n;
 	len = ft_nbrlen(n);
 	if (n < 0)
+	{
+		nn = -n;
 		len++;
+	}
 	buffer = (char *) malloc(len + 1);
 	if (buffer == 0)
 		return (0);
 	if (n < 0)
-	{
-		n = -n;
 		buffer[0] = '-';
-	}
 	buffer[len] = '\0';
 	if (n == 0)
 		buffer[0] = '0';
-	else
+	while (len-- >= 0 && nn != 0)
 	{
-		while (n != 0)
-		{
-			len--;
-			buffer[len] = (n % 10) + 48;
-			n = n / 10;
-		}
+		buffer[len] = (nn % 10) + 48;
+		nn = nn / 10;
 	}
 	return (buffer);
 }
