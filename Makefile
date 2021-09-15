@@ -6,7 +6,7 @@
 #    By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/25 14:06:58 by nlouro            #+#    #+#              #
-#    Updated: 2021/09/14 22:37:29 by nlouro           ###   ########.fr        #
+#    Updated: 2021/09/15 08:32:14 by nuno             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ C_FILES = ft_bzero.c	ft_isascii.c	ft_memchr.c		ft_memmove.c	ft_strlcat.c	\
 	  	  ft_memcpy.c	ft_strchr.c		ft_strlen.c		ft_tolower.c	ft_strnstr.c	\
 		  ft_atoi.c		ft_strdup.c		ft_calloc.c										\
 		  ft_itoa.c		ft_substr.c		ft_strjoin.c	ft_strtrim.c	ft_split.c		\
+			ft_strmapi.c		\
 			ft_putchar_fd.c		ft_putstr_fd.c		ft_putendl_fd.c		ft_putnbr_fd.c
 
 OBJ_FILES = $(C_FILES:%.c=%.o)

@@ -6,7 +6,7 @@
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/26 11:08:17 by nlouro            #+#    #+#             */
-/*   Updated: 2021/09/14 22:37:02 by nlouro           ###   ########.fr       */
+/*   Updated: 2021/09/15 08:31:41 by nuno             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 //char    *ft_itoa(int n);
+char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 void    ft_putchar_fd(char c, int fd);
 void    ft_putstr_fd(char *s, int fd);
