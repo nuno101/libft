@@ -6,7 +6,7 @@
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 22:26:24 by nlouro            #+#    #+#             */
-/*   Updated: 2021/09/15 11:47:44 by nlouro           ###   ########.fr       */
+/*   Updated: 2021/09/16 09:28:50 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putendl_fd(char *s, int fd)
 {
 	int	i;
 
+	if (s == 0)
+		return ;
 	i = 0;
 	while (s[i] != '\0')
 		i++;
