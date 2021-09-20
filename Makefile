@@ -6,7 +6,7 @@
 #    By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/25 14:06:58 by nlouro            #+#    #+#              #
-#    Updated: 2021/09/15 15:28:30 by nlouro           ###   ########.fr        #
+#    Updated: 2021/09/20 22:50:19 by nuno             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,3 +63,8 @@ test_ft_itoa:
 	gcc -Wall -Wextra -Werror -v test/test_ft_itoa.c -o test_ft_itoa.out
 	chmod +x test_ft_itoa.out
 	./test_ft_itoa.out
+
+test_ft_split:
+	gcc -Wall -Wextra -Werror test/test_ft_split.c -o test_ft_split.out
+	chmod +x test_ft_split.out
+	./test_ft_split.out
