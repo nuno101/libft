@@ -6,7 +6,7 @@
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 11:30:02 by nlouro            #+#    #+#             */
-/*   Updated: 2021/09/10 14:04:25 by nlouro           ###   ########.fr       */
+/*   Updated: 2021/09/21 23:20:36 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,16 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (s == 0)
 		return (0);
-	if ((int)start >= ft_strlen(s))
+	if (start >= (unsigned int)ft_strlen(s))
 	{
 		buffer = ft_calloc(1, 1);
 		if (buffer == 0)
-			return (NULL);
+			return (0);
 		return (buffer);
 	}
-	buffer = malloc(len + 1);
+	buffer = (char *)malloc(len + 1 * sizeof(char));
 	if (buffer == 0)
-		return (NULL);
+		return (0);
 	i = 0;
 	while ((size_t) i < len && *(s + start + i) != '\0')
 	{
