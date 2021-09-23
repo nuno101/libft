@@ -28,8 +28,6 @@ int main()
   printf("Result string 1 is: %s\n", result1[1]);
   //printf("Result string 1 is: %s\n", result1[2]);
 
-  return (0);
-
   char str2[] = "    ";
   printf("Test string is: %s\n", str2);
   printf("Test string has #words: %d.\n", count_words(str2, c));
@@ -71,7 +69,7 @@ int main()
   printf("Result string 3 is: %s\n", result6[3]);
   printf("Result string 4 is: %s\n", result6[4]);
   printf("Result string 5 is: %s\n", result6[5]);
-  printf("Result string 6 is: %s\n", result6[6]);
+  printf("Result string e is: %s\n", result6[6]);
 
   char *str7 = malloc(1 * sizeof(char *));
   char d = 0;
@@ -79,4 +77,14 @@ int main()
   printf("Test string has #words: %d.\n", count_words(str7, d));
   char **result7 = ft_split(str7, d);
   printf("Result string 0 is: %s\n", result7[0]);
+
+  char str8[] = "1-2-3-4";
+  printf("Test string is: %s\n", str8);
+  printf("Test string has #words: %d.\n", count_words(str8, cc));
+  char **result8 = ft_split(str8, cc);
+  printf("Result string 0 is: %s\n", result8[0]);
+  printf("Result string 1 is: %s\n", result8[1]);
+  printf("Result string 2 is: %s\n", result8[2]);
+  printf("Result string 3 is: %s\n", result8[3]);
+  printf("Result string 4 is: %s\n", result8[4]);
 }
