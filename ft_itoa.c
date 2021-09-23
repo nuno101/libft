@@ -6,13 +6,13 @@
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 16:43:34 by nlouro            #+#    #+#             */
-/*   Updated: 2021/09/15 16:48:59 by nlouro           ###   ########.fr       */
+/*   Updated: 2021/09/23 17:00:17 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_nbrlen(int nb)
+static int	ft_nbrlen(int nb)
 {
 	int	i;
 

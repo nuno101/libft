@@ -6,13 +6,13 @@
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 18:23:34 by nlouro            #+#    #+#             */
-/*   Updated: 2021/09/23 15:50:46 by nlouro           ###   ########.fr       */
+/*   Updated: 2021/09/23 16:58:53 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_words(const char *s, char c)
+static int	count_words(const char *s, char c)
 {
 	int	wc;
 	int	i;
@@ -32,7 +32,7 @@ int	count_words(const char *s, char c)
 	return (wc);
 }
 
-char	**split_string(const char *str, char c)
+static char	**split_string(const char *str, char c)
 {
 	char	**result;
 	int		i;
