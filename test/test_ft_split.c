@@ -49,4 +49,16 @@ int main()
   printf("Result string 11 is: %s\n", result5[11]);
   printf("Result string 12 is: %s\n", result5[12]);
 
+  char str6[] = "--1-2--3---4----5-----42";
+  char cc = '-';
+  printf("Test string is: %s\n", str6);
+  printf("Test string has #words: %d.\n", count_words(str6, cc));
+  char **result6 = ft_split(str6, cc);
+  printf("Result string 0 is: %s\n", result6[0]);
+  printf("Result string 1 is: %s\n", result6[1]);
+  printf("Result string 2 is: %s\n", result6[2]);
+  printf("Result string 3 is: %s\n", result6[3]);
+  printf("Result string 4 is: %s\n", result6[4]);
+  printf("Result string 5 is: %s\n", result6[5]);
+  printf("Result string 6 is: %s\n", result6[6]);
 }
