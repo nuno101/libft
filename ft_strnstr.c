@@ -6,7 +6,7 @@
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 11:47:45 by nlouro            #+#    #+#             */
-/*   Updated: 2021/09/21 23:41:17 by nlouro           ###   ########.fr       */
+/*   Updated: 2021/09/23 16:53:58 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,29 +15,28 @@
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
-	size_t	j;
 
+	if (!haystack && !needle)
+		return (NULL);
 	if (ft_strlen(needle) == 0)
 		return ((char *)haystack);
-	if (len == 0)
-		return (0);
 	i = 0;
-	j = 0;
-	while (haystack[i] != '\0' && i < len)
+	while (*haystack && len > 0)
 	{
-		if (haystack[i] == needle[j])
+		if (*haystack == *needle)
 		{
-			j++;
-			if (needle[j] == '\0' || i >= len)
-				return ((char *)(haystack + i - j + 1));
+			i = 0;
+			while (haystack[i] == needle[i] && haystack[i] != '\0' && len > 0)
+			{
+				i++;
+				len--;
+			}
+			if (i == (size_t)ft_strlen(needle))
+				return ((char *)(haystack));
+			len = len + i;
 		}
-		else
-		{
-			j = 0;
-			if (haystack[i] == needle[j])
-				j++;
-		}
-		i++;
+		haystack++;
+		len--;
 	}
 	return (NULL);
 }
