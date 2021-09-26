@@ -6,7 +6,7 @@
 #    By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/25 14:06:58 by nlouro            #+#    #+#              #
-#    Updated: 2021/09/23 17:06:19 by nlouro           ###   ########.fr        #
+#    Updated: 2021/09/26 11:37:42 by nlouro           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,3 +41,28 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
+
+test_ft_islpha:
+	gcc -Wall -Wextra -Werror test/test_ft_isalpha.c -o test_ft_isalpha.out
+	chmod +x test_ft_isalpha.out
+
+test_ft_strlen:
+	gcc -Wall -Wextra -Werror test/test_ft_strlen.c -o test_ft_strlen.out
+	chmod +x test_ft_strlen.out
+	./test_ft_strlen.out
+
+test_ft_strlcat:
+	gcc -Wall -Wextra -Werror -v test/test_ft_strlcat.c -o test_ft_strlcat.out
+	chmod +x test_ft_strlcat.out
+	./test_ft_strlcat.out
+
+test_ft_itoa:
+	gcc -Wall -Wextra -Werror -v test/test_ft_itoa.c -o test_ft_itoa.out
+	chmod +x test_ft_itoa.out
+	./test_ft_itoa.out
+
+test_ft_split:
+	gcc -Wall -Wextra -Werror test/test_ft_split.c -o test_ft_split.out
+	chmod +x test_ft_split.out
+	./test_ft_split.out
+
