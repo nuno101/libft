@@ -6,7 +6,7 @@
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 11:30:02 by nlouro            #+#    #+#             */
-/*   Updated: 2021/09/21 23:20:36 by nlouro           ###   ########.fr       */
+/*   Updated: 2021/09/26 11:41:38 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 			return (0);
 		return (buffer);
 	}
-	buffer = (char *)malloc(len + 1 * sizeof(char));
+	buffer = (char *)malloc((len - start + 1) * sizeof(char));
 	if (buffer == 0)
 		return (0);
 	i = 0;
